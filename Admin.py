@@ -16,6 +16,9 @@ password = input("Password is(secret): ")
 
 if username == admin_username and password == admin_password:
     print("Login Successful")
+else:
+    print("Login failed")
+    exit()
 
 def save_to_file(food_items):
     with open("food_items.json", "w") as file:
@@ -119,5 +122,3 @@ while True:
                 break
         if not food_item_found:
             print("Food item not found")
-
-
