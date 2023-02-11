@@ -17,7 +17,7 @@ password = input("Password is(secret): ")
 if username == admin_username and password == admin_password:
     print("Login Successful")
 else:
-    print("Login failed")
+    print("Username or Password is invalid")
     exit()
 
 def save_to_file(food_items):
