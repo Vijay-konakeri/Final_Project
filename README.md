@@ -1,8 +1,8 @@
 # Food Ordering app for a restaurant
 
 *************Admin************
-usename - admin
-password - secret
+*username is admin
+*password is secret
 
 In this Python project, a JSON file is automatically generated.
 
