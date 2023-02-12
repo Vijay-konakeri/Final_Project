@@ -117,18 +117,31 @@ def update_profile(user):
     choice = int(input("Enter your choice: "))
 
     if choice == 1:
+        print("Previous name:", user.name)
         user.name = input("Enter new full name: ")
+        print("Updated name:", user.name)
     elif choice == 2:
+        print("Previous phone number:", user.phone)
         user.phone = input("Enter new phone number: ")
+        print("Updated phone number:", user.phone)
     elif choice == 3:
-        user.email = input("Enter new phone email: ")
+        print("Previous email:", user.email)
+        new_email = input("Enter new email: ")
+        registered_users.pop(user.email)
+        registered_users[new_email] = user
+        user.email = new_email
+        print("Updated email:", user.email)
     elif choice == 4:
+        print("Previous address:", user.address)
         user.address = input("Enter new address: ")
+        print("Updated address:", user.address)
     elif choice == 5:
+        print("Previous password:", user.password)
         user.password = input("Enter new password: ")
+        print("Updated password:", user.password)
     else:
-        print("Invalid choice. Please try again.")
-    print("User details updated successfully!")
+        print("Invalid choice.")
+
 
 import datetime
 
@@ -171,7 +184,7 @@ print("Welcome to EDYODA Restaurant")
 while True:
     print("Press 1 for Register")
     print("Press 2 for Log in")
-    print("3. Exit")
+    print("Press 3 for Exit")
     choice = int(input("Enter your choice: "))
     
     if choice == 1:
