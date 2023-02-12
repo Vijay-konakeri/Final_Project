@@ -23,7 +23,7 @@ def register():
     # Create a new user object and add it to the registered users
     new_user = User(name, phone, email, address, password)
     registered_users[email] = new_user
-    print("Registration Successful!")
+    print("Registration Successful Please Press 2 to login!")
 
 # Function to log in to the application
 def login():
